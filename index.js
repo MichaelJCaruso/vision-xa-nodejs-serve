@@ -100,6 +100,12 @@ MyConfiguration.ifItem (
 const visionServer = require('./lib/vision_server');
 module.exports.visionServer = visionServer;
 app.use ('/vision/api', visionServer.app);
+MyConfiguration.ifItem (
+    'vision_api_logging', val=>{
+        console.log ("vision api logging enabled");
+        visionServer.logger.enabled = true;
+    }
+);
 
 /*--------------------------*
  *----  web servers...  ----*
