@@ -59,13 +59,13 @@ While _http_ works well for basic testing, you may also need to support _https_ 
 ```bash
 export vision_xa_nodejs_serve_https_port=2301
 export vision_xa_nodejs_serve_https_key_file=PATH_TO_YOUR_PEM_FORMAT_KEY_FILE
-export vision_xa_nodejs_serve_https_key_file=PATH_TO_YOUR_PEM_FORMAT_CERT_CHAIN_FILE
+export vision_xa_nodejs_serve_https_cert_file=PATH_TO_YOUR_PEM_FORMAT_CERT_CHAIN_FILE
 ```
 
 and, if your private key is encrypted with a pass-phrase:
 
 ```bash
-export vision_xa_nodejs_serve_https_https_passphrase=YOUR_SECRET_PASS_PHRASE
+export vision_xa_nodejs_serve_https_passphrase=YOUR_SECRET_PASS_PHRASE
 ```
 
 (Don't worry too much, the value for that environment variable will be deleted from the node process as soon as it has been used to decrypt your private key).
